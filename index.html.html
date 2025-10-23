@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Meu Amor 💙</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #d0e8ff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header { padding: 40px 20px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .btn { margin-top: 20px; padding: 12px 30px; font-size: 1rem; border: none; border-radius: 25px; background: #4d79ff; color: white; cursor: pointer; transition: transform 0.2s ease; }
+        .btn:hover { transform: scale(1.05); }
+        .foto { width:80%; max-width:300px; height:200px; border:3px dashed #4d79ff; border-radius:20px; margin:20px auto; display:flex; align-items:center; justify-content:center; color:#777; position:relative;}
+        .mensagem-box { display:flex; justify-content:center; align-items:center; margin-top:20px; }
+        textarea { width:90%; max-width:500px; height:150px; padding:15px; border-radius:15px; border:2px solid #4d79ff; font-size:1rem; }
+        @media (max-width:600px) { h1{font-size:1.8rem;} .btn{width:80%;} textarea{width:80%;} }
+        @keyframes fall { to { transform: translateY(100vh); opacity:0; } }
+        .falling-heart { position: fixed; top: -10px; font-size: 2rem; pointer-events:none; animation: fall 6s linear forwards; }
+    </style>
+</head>
+<body>
+    <div id="page1">
+        <header>
+            <h1>Oiee, meu amor💙</h1>
+            <p>Fiz esse site simpleszinho pra você. Queria te dizer que te amo muito, cada vez mais eu te amo tanto que nem mesmo um livro poderia expressar o que sinto. </p>
+        </header>
+        <button class="btn" onclick="showPage2()">clica aqui amor</button>
+    </div>
+
+    <div id="page2" style="display:none; text-align:center; padding:20px;">
+        <h1>19 aninhos do meu bebe🥹</h1>
+       <div class="foto">
+    <img src="Captura de tela 2025-10-23 175159.png" alt="Foto do meu amor" style="width:100%; height:100%; border-radius:20px; object-fit:cover;">
+    </div>
+<div class="mensagem-box" style="background-color: rgba(77, 121, 255, 0.2); padding: 20px; border-radius: 15px; display: inline-block;">
+    <p style="margin: 0; font-size: 1.2rem; color: #000;">Amor, hoje você completou 19 aninhos! 🎉 Quero te dar os parabéns do fundo do coração e dizer o quanto você é especial para mim. Cada dia ao seu lado é um presente, e eu me sinto a pessoa mais sortuda do mundo por ter você na minha vida.
+
+Eu sei que você disse que não gosta muito do seu aniversário, mas para mim essa data se tornou uma das minhas favoritas. 💙 É o dia em que o amor da minha vida nasceu, e isso já torna tudo tão único e especial!
+
+Quero que você saiba que você é incrível e inesquecível. Todos os seus gestos, seu sorriso, seu jeito de me fazer sentir amada… tudo isso me encanta cada vez mais e faz meu coração bater mais forte.
+
+Todos os dias eu me pego lembrando de nós dois juntinhos, abraçados, trocando beijinhos e rindo das nossas besteiras. Esses momentos são meu refúgio, minha alegria e meu aconchego. Quero estar ao seu lado em todos os momentos, nas nossas conquistas, nas alegrias, e até nos desafios, porque é nos momentos mais difíceis que precisamos ainda mais de nós dois.
+
+Meu menino, eu te amo demais! 💖 Ter você comigo me faz tão feliz, e não há nada que eu queira mais do que continuar construindo nossos momentos juntos, rindo, amando e vivendo cada dia com você. Hoje, no seu aniversário, meu coração se encheu de alegria por ter você na minha vida, e eu só quero que saiba o quanto você significa para mim.
+
+Eu poderia escrever um livro falando o quanto te amo, mas nem mesmo um livro seria o suficiente para expressar o que eu sinto. 💙</p>
+</div>
+<div>
+        <button class="btn" onclick="showPage1()">Voltar</button>
+    </div>
+
+    <script>
+        function showPage2(){document.getElementById('page1').style.display='none';document.getElementById('page2').style.display='block';}
+        function showPage1(){document.getElementById('page2').style.display='none';document.getElementById('page1').style.display='block';}
+
+        // chuva de corações azuis contínua no fundo
+        function createFallingHearts() {
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.className = 'falling-heart';
+                heart.innerHTML = '💙';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = (15 + Math.random()*30) + 'px';
+                heart.style.animationDuration = (5 + Math.random()*5) + 's';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 10000);
+            }, 200);
+        }
+
+        createFallingHearts();
+    </script>
+</body>
+</html>
